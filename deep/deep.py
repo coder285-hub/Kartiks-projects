@@ -1,6 +1,6 @@
 user_input=input("What is the Answer to the Great Question of Life, the Universe, and Everything?")
 
-if user_input=="42" or"forty-two" or "forty two":
+if user_input=="42" or user_input=="forty-two" or user_input=="forty two":
     print("yes")
 
 else:
