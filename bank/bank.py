@@ -1,4 +1,4 @@
-balances ={"Hello":0,"Hello, Newman":0,"How you doing?":20,"What's happening?":100}
+balances ={"Hello":0," Hello ":0,"Hello, Newman":0,"How you doing?":20,"What's happening?":100,"What's up?":100}
 
 user_input=input("Greeting: ")
 
