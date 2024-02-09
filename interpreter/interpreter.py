@@ -20,6 +20,6 @@ elif y == '/':
         print("Invalid input. Please enter a valid arithmetic expression.")
         exit()
 
-print(round(result, 1))
+print(float(round(result, 1)))
 
 
