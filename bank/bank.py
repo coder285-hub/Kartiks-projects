@@ -1,1 +1,1 @@
-balances ={"Hello":0,"Hello, Newman}
+balances ={"Hello":0,"Hello, Newman":0,"}
