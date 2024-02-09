@@ -3,9 +3,11 @@ file_extension=file_name.rsplit(".",1)[1] if '.' in file_name else ''
 if file_extension.lower() in ['gif', 'jpg', 'jpeg', 'png']:
     if file_extension == 'jpg':
         file_extension = 'jpeg'
-    print(f"image/{file_extension}")
-elif file_extension in ['pdf', 'txt', 'zip']:
-    print(f"application/{file_extension}")
+    print(f"image/{file_extension.lower()}")
+elif file_extension.lower() in ['pdf', 'zip']:
+    print(f"application/{file_extension.lower()}")
+elif file_extension.lower()==txt:
+    print(f"application/{file_extension.lower()}")
 else:
     print("application/octet-stream")
 
