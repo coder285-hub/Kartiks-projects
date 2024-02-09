@@ -7,7 +7,7 @@ if file_extension.lower() in ['gif', 'jpg', 'jpeg', 'png']:
 elif file_extension.lower() in ['pdf', 'zip']:
     print(f"application/{file_extension.lower()}")
 elif file_extension.lower()==txt:
-    print(f"application/{file_extension.lower()}")
+    print("text/plain")
 else:
     print("application/octet-stream")
 
