@@ -1,10 +1,5 @@
 expression = input("Enter an arithmetic expression (e.g., 1 + 1): ")
 
-try:
-    result = calculate(expression)
-    print("Result:", result)
-except (ValueError, ZeroDivisionError):
-    print("Invalid input. Please enter a valid arithmetic expression.")
 
 z, y, x = expression.split()
 
@@ -20,9 +15,11 @@ elif y == '-':
 elif y == '*':
     result = z * x
 elif y == '/':
-    result = z / x
+    try:
+        result = z / x
+    except (ValueError, ZeroDivisionError):
+        print("Invalid input. Please enter a valid arithmetic expression.")
 
-return round(result, 1)  # Round the result to one decimal place
-
+print(round(result,1))
 
 
