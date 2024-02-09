@@ -4,5 +4,6 @@ user_input=input("Greeting: ")
 
 if user_input in balances:
     print("$"+str(balances[user_input]))
+    
 else:
     print("Invalid Input")
