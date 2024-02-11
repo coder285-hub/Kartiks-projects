@@ -1,5 +1,6 @@
 def convert(time_str):
-    
+    hours, minutes = time_str.split(':')
+    return int(hours) + int(minutes) / 60
 
 def main():
     time = input("Enter the time in 24-hour format (e.g., 7:00): ")
