@@ -7,11 +7,11 @@ def main():
     hour = convert(time)
 
     if 7.0 <= hour <= 8.0:
-        print("It's breakfast time!")
+        print("breakfast time")
     elif 12.0 <= hour <= 13.0:
-        print("It's lunch time!")
+        print("lunch time")
     elif 18.0 <= hour <= 19.0:
-        print("It's dinner time!")
+        print("dinner time")
 
 if __name__ == "__main__":
     main()
