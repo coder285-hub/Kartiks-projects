@@ -1,15 +1,14 @@
-def main():
-    amount_due = 50
-    while amount_due > 0:
-        print("Amount Due:", amount_due)
-        amount_due -= check_coins()
-    print("Change Owed: ", abs(amount_due))
+price = 50
+total_paid = 0
+coins = [25, 10, 5]
 
-def check_coins():
-    while True:
-        coins = int(input("Insert Coin: "))
-        if coins  == 25 or coins == 10 or coins == 5:
-            break
-    return coins
+while price > 0:
+    print(f"Amount Due: {price}")
+    pay = int(input("Insert Coin: "))
+    if pay in coins:
+        # Update price and total_paid for every valid transaction
+        price = price - pay
+        total_paid = total_paid + pay
 
-main()
+if total_paid >= price:
+    print(f"Change Owed: {total_paid - 50}")
