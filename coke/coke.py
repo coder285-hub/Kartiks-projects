@@ -13,7 +13,7 @@ def main():
         # Check if the coin is an accepted denomination
         if coin in accepted_coins:
             amount_inserted += coin
-            print("Amount due:", price - amount_inserted, "cents")
+            print("Amount due:", price - amount_inserted)
         else:
             print("Invalid coin. Accepted denominations are 25, 10, and 5 cents.")
 
