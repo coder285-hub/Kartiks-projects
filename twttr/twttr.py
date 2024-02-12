@@ -3,7 +3,7 @@ user_input = input("Input:")
 vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
 result = ""
 
-for char in string:
+for char in user_input:
     if char not in vowels:
         result = result + char
 
