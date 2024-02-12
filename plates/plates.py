@@ -6,8 +6,8 @@ def main():
         print("Invalid")
 
 
-def is_valid(s):
-    
+def is_valid(plate):
+
     if not plate[:2].isalpha():
         return False
 
