@@ -7,7 +7,8 @@ def main():
 
 
 def is_valid(s):
-      if not plate[:2].isalpha():
+    
+    if not plate[:2].isalpha():
         return False
 
     # Rule 2: Plate must have a minimum of 2 characters and a maximum of 6 characters
