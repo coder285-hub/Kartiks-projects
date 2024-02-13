@@ -3,11 +3,12 @@ def main():
     groceries = {}
     try:
         while True:
-            item = input("Item: ").strip().lower()
-            if item in groceries:
-                groceries[item] += 1
-            else:
-                groceries[item] = 1
+            item = input().strip().lower()
+            if item:
+                if item in groceries:
+                    groceries[item] += 1
+                else:
+                    groceries[item] = 1
     except EOFError:
         pass
 
@@ -18,3 +19,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
