@@ -10,9 +10,9 @@ def main():
                 else:
                     groceries[item] = 1
     except EOFError:
-        sorted_dict = dict(sorted(list(groceries.items())))
+        sorted_dict = dict(sorted(groceries.items()))
         for item in sorted_dict:
-            print(sorted_dict[item], item, sep=" ")
+            print(sorted_dict[item], item.upper(), sep=" ")
         return
     except KeyError:
         pass
