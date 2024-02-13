@@ -20,8 +20,9 @@ calories_dict = {
     "Tangerine": 50,
     "Watermelon": 80
 }
-user_input = input("Item:")
-if user_input.capitalize() in calories_dict:
+user_input = input("Item:").capitalize()
+
+if user_input in calories_dict:
     print("Calories:" + str(calories_dict[user_input]))
 else:
     print(" ")
