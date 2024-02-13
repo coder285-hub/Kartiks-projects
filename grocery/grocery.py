@@ -10,6 +10,11 @@ def main():
                 else:
                     groceries[item] = 1
     except EOFError:
+        sorted_dict = dict(sorted(list(groceries.items())))
+        for item in sorted_dict:
+            print(sorted_dict[item], item, sep=" ")
+        return
+    except KeyError:
         pass
 
     # Output the grocery list
@@ -19,5 +24,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
