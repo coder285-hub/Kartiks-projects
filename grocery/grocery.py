@@ -1,9 +1,8 @@
 def main():
-    print("Enter the items you need from the grocery store (press Ctrl+D when finished):")
     groceries = {}
     try:
         while True:
-            item = input().strip().lower()
+            item = input().strip().strip()
             if item:
                 if item in groceries:
                     groceries[item] += 1
