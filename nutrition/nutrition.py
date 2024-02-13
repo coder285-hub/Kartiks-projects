@@ -21,9 +21,7 @@ calories_dict = {
     "Watermelon": 80
 }
 user_input = input("Item:")
-
-if user_input in calc_dict:
-    print("Calories:"+str(calc_dict[user_input]))
-
+if user_input in calories_dict:
+    print("Calories:" + str(calories_dict[user_input]))
 else:
     print("Invalid Input")
