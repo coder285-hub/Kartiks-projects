@@ -29,7 +29,7 @@ def get_iso_date():
             except ValueError:
                 print("Invalid input. Please enter a valid date.")
         else:
-            parts = user_input.split()
+            parts = user_input.split(", ")
             if len(parts) == 3:
                 try:
                     month = months.index(parts[0]) + 1
@@ -45,5 +45,9 @@ def get_iso_date():
                 print("Invalid input. Please enter a valid date.")
 
 if __name__ == "__main__":
-    iso_date = get_iso_date()
-    print("ISO 8601 Date:", iso_date)
+    while True:
+        iso_date = get_iso_date()
+        print("ISO 8601 Date:", iso_date)
+        confirm = input("Do you want to convert another date? (yes/no): ")
+        if confirm.lower() != "yes":
+            break
