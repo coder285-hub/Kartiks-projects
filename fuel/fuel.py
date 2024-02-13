@@ -27,8 +27,8 @@ def main():
             break
         except ZeroDivisionError:
             print("Denominator cannot be zero.")
-        except ValueError as E:
-            print(E)
+        except ValueError as e:
+            print(e)
 
 if __name__ == "__main__":
     main()
