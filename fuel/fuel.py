@@ -16,9 +16,9 @@ def calculate_percentage(x, y):
 def main():
     while True:
         try:
-            x, y = get_fraction()
-            if y == 0:
-                print("E")
+            x, y = input(fraction).split("/")
+            if 0 <= int(x)/int(y) <= 0.1:
+                return("E")
             else:
                 percentage = calculate_percentage(x, y)
                 if percentage <= 1:
