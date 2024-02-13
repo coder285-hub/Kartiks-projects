@@ -6,27 +6,26 @@ def main():
         print("Invalid")
 
 
-def is_valid(plate):
-
-    if not plate[:2].isalpha():
+def is_valid(s):
+    if 2 <= len(s) <= 6 and s.isalnum():
+        # Return true if characters are all letters
+        if s.isalpha():
+            return True
+        else:
+            if s[:2].isalpha() and s[-2:].isdigit():
+                for i in range(len(s)):
+                    if s[i].isdigit():
+                        if s[i].startswith("0") or s[i:].isalpha():
+                            return False
+                        else:
+                            return True
+            else:
+                return False
+    else:
         return False
-
-    # Rule 2: Plate must have a minimum of 2 characters and a maximum of 6 characters
-    if not 2 <= len(plate) <= 6:
-        return False
-
-    # Rule 3: The first number used cannot be '0'
-    if plate[0].isdigit() and plate[0] == '0':
-        return False
-
-    # Rule 4: No periods, spaces, or punctuation marks are allowed
-    if any(not c.isalnum() for c in plate):
-        return False
-    
-    if any(c.isdigit() for c in plate[:-1]):
-        return False
-
-    return True
 
 
 main()
+
+
+
