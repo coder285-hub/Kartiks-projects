@@ -24,4 +24,4 @@ user_input = input("Item:")
 if user_input in calories_dict:
     print("Calories:" + str(calories_dict[user_input]))
 else:
-    print("Invalid Input")
+    print("Invalid Input"\\\)
