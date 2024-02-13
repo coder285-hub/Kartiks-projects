@@ -20,4 +20,6 @@ calories_dict = {
     "Tangerine": 50,
     "Watermelon": 80
 }
-user_input = input
+user_input = input("Item:")
+
+
