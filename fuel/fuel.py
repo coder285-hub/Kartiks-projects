@@ -23,12 +23,12 @@ def main():
             elif percentage >= 99:
                 print("F")
             else:
-                print(f"{percentage}% full")
+                print(f"{percentage}%)
             break
         except ZeroDivisionError:
             print("Denominator cannot be zero.")
-        except ValueError as e:
-            print(e)
+        except ValueError as E:
+            print(E)
 
 if __name__ == "__main__":
     main()
