@@ -1,4 +1,4 @@
 import random
 
 while True:
-    level = 
+    level = int(input())
