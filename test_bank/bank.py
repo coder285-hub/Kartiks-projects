@@ -13,10 +13,12 @@ def value(greeting):
 
     greeting = greeting.lower().strip()
 
-    if greeting in balances:
-        return f"${balances[greeting]}"
-    else:
-        return "$100"
+    for letter in greeting:
+
+        if letter in balances:
+            return f"${balances[greeting]}"
+        else:
+            return "$100"
 
 
 if __name__ == "__main__":
