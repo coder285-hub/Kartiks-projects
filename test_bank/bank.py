@@ -16,7 +16,7 @@ def value(greeting):
     for letter in greeting:
 
         if letter in balances:
-            return f"${balances[greeting]}"
+            return f"${balances[greeting]}
 
     return "$100"
 
