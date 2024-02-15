@@ -13,9 +13,9 @@ def value(greeting):
 
     for letter in greeting:
         if letter in balances:
-            return {balances[letter]}  # Use 'letter' instead of 'greeting'
+            return f"${balances[letter]}"  # Use 'letter' instead of 'greeting'
 
-    return 100  # Move the return statement outside the loop
+    return "$100"  # Move the return statement outside the loop
 
 if __name__ == "__main__":
     main()
