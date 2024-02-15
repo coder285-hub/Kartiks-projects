@@ -5,7 +5,7 @@ def main():
 # Test letters upper and lower cases def test_upper_lower_cases(): ...assert shorten('twitter')
 def lower_uppercase_test():
      assert shorten('TWITTER') == 'TWTTR'
-     assert shorten('TwItTeR') == 'TwtTR
+     assert shorten('twitter') == 'twttr'
 # Test numbers
 
 if __name__ == "__main__":
