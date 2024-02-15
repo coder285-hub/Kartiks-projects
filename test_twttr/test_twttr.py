@@ -1,13 +1,12 @@
 from twttr import shorten
-
 def main():
-    lower_uppercase_test()
-
+     lower_uppercase_test()
+# Call test functions test_upper_lower_cases()
+# Test letters upper and lower cases def test_upper_lower_cases(): ...assert shorten('twitter')
 def lower_uppercase_test():
-    # Test with lowercase input
-    assert shorten("twitter") == "twttr"
-    # Test with uppercase input
-    assert shorten("TWITTER") == "TWTTR"
+     assert shorten('TWITTER') == 'TWTTR'
+     assert shorten('TwItTeR') == 'TwtTR
+# Test numbers
 
 if __name__ == "__main__":
-    main()
+     main()
