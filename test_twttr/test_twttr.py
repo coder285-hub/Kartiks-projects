@@ -1,12 +1,7 @@
 from twttr import shorten
 
-def main():
-     lower_uppercase_test()
-
-
-def lower_uppercase_test():
-     assert shorten("twitter")=="twttr"
-     assert shorten("TWIITER")=="TWTTR"
-
-if __name__ == "__main__":
-    main()
+def test_assert():
+    assert shorten("hello world") == "hll wrld"
+    assert shorten("HELLO WORLD") == "HLL WRLD"
+    assert shorten("h3ll0 w0rld") == "h3ll0 w0rld"
+    assert shorten("h@llo w*rld!!!") == "h@ll w*rld!!!"
