@@ -17,8 +17,8 @@ def value(greeting):
 
         if letter in balances:
             return f"${balances[greeting]}"
-        else:
-            return "$100"
+
+    return "$100"
 
 
 if __name__ == "__main__":
