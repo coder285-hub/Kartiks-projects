@@ -1,8 +1,10 @@
 import random
 
 while True:
-    level = int(input("Level:" ))
-    while True:
+    try:
+        level = int(input("Level: "))
+        x = random.randint(1, level)
+        while True:
             guess = int(input("Guess: "))
             if guess > x:
                 print("Too large!")
