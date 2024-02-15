@@ -1,18 +1,22 @@
 def main():
-    user_input=input("Greeting: ")
+    greeting_input = input("Greeting: ")
+    result = value(greeting_input)
+    print(result)
 
 
 
 def value(greeting):
-    balances ={"Hello":0," Hello ":0,"Hello, Newman":0,"How you doing?":20,"What's happening?":100,"What's up?":100}
+    balances = {
+        "hello": 0,
+        "h": 20,
+    }
 
+    greeting = greeting.lower().strip()
 
     if greeting in balances:
-        return str(balances[greeting])
-
+        return f"${balances[greeting]}"
     else:
-        print("Invalid Input")
-
+        return "$100"
 
 
 if __name__ == "__main__":
