@@ -4,7 +4,6 @@ def main():
     print(result)
 
 def value(greeting):
-    
     balances = {
         "hello": 0,
         "h": 20,
