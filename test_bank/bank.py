@@ -9,12 +9,18 @@ def value(greeting):
         "hi": 20,
     }
 
-    greeting = greeting.lower().strip()
+    total_balance = 0
 
-    greeting = greeting.lower().strip()
+    words = greeting.lower().strip().split()  # Split the greeting into words
 
-    if greeting in balances:  # Check if the whole greeting is in balances
-        return f"${balances[greeting]}"  
+    for word in words:
+        if word in balances:
+            total_balance += balances[word]
+
+    if total_balance > 0:
+        return f"${total_balance}"
+    else:
+        return "$100"  # Default return if no valid words are found
 
 if __name__ == "__main__":
     main()
