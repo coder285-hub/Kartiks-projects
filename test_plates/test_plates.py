@@ -1,5 +1,12 @@
 from vanity import is_valid
 
+def main():
+    test_begintwoletters()
+    test_length()
+    test_num()
+    test_punct()
+
+
 
 # “All vanity plates must start with at least two letters.”
 def test_begintwoletters():
@@ -28,3 +35,6 @@ def test_num():
 # “No periods, spaces, or punctuation marks are allowed.”
 def test_punct():
     assert is_valid("CS50!") == False
+
+if __name__ == "__main__":
+    main()
