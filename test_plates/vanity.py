@@ -25,4 +25,5 @@ def is_valid(s):
         return False
 
 
-main()
+if __name__ == "__main__":
+    main()
