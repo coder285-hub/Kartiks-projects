@@ -3,7 +3,7 @@ def main():
     result = value(greeting_input)
     print(result)
 
-def value(greeting):
+def calculate_balance(greeting):
     balances = {
         "hello": 0,
         "hi": 20,
@@ -14,8 +14,8 @@ def value(greeting):
     words = greeting.lower().strip().split()  # Split the greeting into words
 
     for word in words:
-        if word in balances:
-            total_balance += balances[word]
+        if word.lower() in balances:  # Convert the word to lowercase before checking
+            total_balance += balances[word.lower()]  # Use the lowercase word as the key
 
     if total_balance > 0:
         return f"${total_balance}"
