@@ -1,7 +1,6 @@
 def main():
     greeting_input = input("Greeting: ")
-    result = calculate_balance(greeting_input)  # Use the correct function name
-    print(result)
+    print(f"${calculate_balance(greeting_input)}")
 
 def calculate_balance(greeting):
     balances = {
@@ -14,13 +13,13 @@ def calculate_balance(greeting):
     words = greeting.lower().strip().split()  # Split the greeting into words
 
     for word in words:
-        if word[0].lower() in balances:  # Convert the word to lowercase before checking
-            return   # Use the lowercase word as the key
+        if word[0].lower()=="hi": # Convert the word to lowercase before checking
+            return 20  # Use the lowercase word as the key
 
-    if total_balance > 0:
-        return f"${total_balance}"
-    else:
-        return "$100"  # Default return if no valid words are found
+        elif word[0].lower()=="hello":
+            return 0
+        else:
+            return 100 # Default return if no valid words are found
 
 if __name__ == "__main__":
     main()
