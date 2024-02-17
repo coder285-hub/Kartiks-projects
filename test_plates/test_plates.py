@@ -1,4 +1,4 @@
-from vanity import is_valid
+from plates import is_valid
 
 def main():
     test_begintwoletters()
