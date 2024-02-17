@@ -14,8 +14,8 @@ def calculate_balance(greeting):
     words = greeting.lower().strip().split()  # Split the greeting into words
 
     for word in words:
-        if word.lower() in balances:  # Convert the word to lowercase before checking
-            total_balance += balances[word.lower()]  # Use the lowercase word as the key
+        if word[0].lower() in balances:  # Convert the word to lowercase before checking
+            return   # Use the lowercase word as the key
 
     if total_balance > 0:
         return f"${total_balance}"
