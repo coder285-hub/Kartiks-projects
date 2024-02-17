@@ -1,6 +1,6 @@
 def main():
     greeting_input = input("Greeting: ")
-    result = value(greeting_input)
+    result = calculate_balance(greeting_input)  # Use the correct function name
     print(result)
 
 def calculate_balance(greeting):
