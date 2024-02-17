@@ -6,7 +6,7 @@ def main():
 def value(greeting):
     balances = {
         "hello": 0,
-        "h": 20,
+        "hi": 20,
     }
 
     greeting = greeting.lower().strip()
