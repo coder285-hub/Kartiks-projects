@@ -14,13 +14,13 @@ def calculate_balance(greeting):
 
     for word in words:
         if word[0].lower()=="hi": # Convert the word to lowercase before checking
-            return 20  # Use the lowercase word as the key
-
+            total_balance += 20  # Add the balance for "hi" to the total balance
         elif word[0].lower()=="hello":
-            return 0
+            total_balance += 0  # Add the balance for "hello" to the total balance
         else:
-            return 100 # Default return if no valid words are found
+            total_balance += 100  # Add the default balance to the total balance
+
+    return total_balance
 
 if __name__ == "__main__":
     main()
-
