@@ -1,35 +1,29 @@
 import sys
-import os
 
-def count_lines_of_code(file_path):
+
+def main():
+    if len(sys.argv) < 2:
+        sys.exit("Too few command-line arguments")
+    elif len(sys.argv) > 2:
+        sys.exit("Too many command-line arguments")
+    else:
+        if sys.argv[1][-3:] != ".py":
+            sys.exit("Not a python file")
+        else:
+            print(count_lines(sys.argv[1]))
+
+
+def count_lines(file):
     try:
-        with open(file_path, 'r') as file:
-            lines = file.readlines()
-            code_lines = 0
-            in_multiline_comment = False
-            for line in lines:
-                line = line.strip()
-                if not line or line.startswith('#') or line.startswith("'''") or line.startswith('"""'):
-                    continue
-                if line.endswith("'''") or line.endswith('"""'):
-                    in_multiline_comment = not in_multiline_comment
-                    continue
-                if not in_multiline_comment:
-                    code_lines += 1
-            return code_lines
+        counter = 0
+        with open(file, "r") as f:
+            for line in f:
+                if not (line.lstrip().startswith("#") or line.strip() == ""):
+                    counter = counter + 1
+            return counter
     except FileNotFoundError:
-        sys.exit("Error: Specified file does not exist.")
+        sys.exit("File does not exist")
+
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        sys.exit("Usage: python lines.py <filename.py>")
-
-    file_path = sys.argv[1]
-    if not file_path.endswith('.py'):
-        sys.exit("Error: File must have a .py extension.")
-
-    if not os.path.isfile(file_path):
-        sys.exit("Error: Specified file does not exist.")
-
-    lines_of_code = count_lines_of_code(file_path)
-    print(lines_of_code)
+    main()
