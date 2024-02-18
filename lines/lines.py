@@ -1,4 +1,5 @@
 import sys
+import os
 
 def count_lines_of_code(file_path):
     try:
@@ -8,9 +9,9 @@ def count_lines_of_code(file_path):
             in_multiline_comment = False
             for line in lines:
                 line = line.strip()
-                if not line or line.startswith('#'):
+                if not line or line.startswith('#') or line.startswith("'''") or line.startswith('"""'):
                     continue
-                if line.startswith("'''") or line.startswith('"""'):
+                if line.endswith("'''") or line.endswith('"""'):
                     in_multiline_comment = not in_multiline_comment
                     continue
                 if not in_multiline_comment:
@@ -27,5 +28,8 @@ if __name__ == "__main__":
     if not file_path.endswith('.py'):
         sys.exit("Error: File must have a .py extension.")
 
+    if not os.path.isfile(file_path):
+        sys.exit("Error: Specified file does not exist.")
+
     lines_of_code = count_lines_of_code(file_path)
-    print(f"Number of lines of code (excluding comments and blank lines): {lines_of_code}")
+    print(lines_of_code)
