@@ -36,4 +36,3 @@ test_number_to_words()
 test_calculate_age_in_minutes()
 test_parse_date()
 
-print("All tests passed!")
