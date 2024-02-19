@@ -1,11 +1,14 @@
-from validators import validate_email
+from validators import validate_email, ValidationFailure
 
 
 def main():
     email = input("Please enter your email address: ")
-    if validate_email(email):
-        print("Valid")
-    else:
+    try:
+        if validate_email(email):
+            print("Valid")
+        else:
+            print("Invalid")
+    except ValidationFailure:
         print("Invalid")
 
 
