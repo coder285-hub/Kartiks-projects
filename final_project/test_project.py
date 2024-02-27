@@ -21,11 +21,12 @@ class TestProject(unittest.TestCase):
         # Test if speech recognition works properly
         with patch('project.speak') as mocked_speak:
             # Simulate speech recognition with a known phrase
-            project.speak("आपका", text1)
-            mocked_speak.assert_called_with("आपका", text1)
+            project.speak("आपका", "MockedTextWidget")
+            mocked_speak.assert_called_with("आपका", "MockedTextWidget")
 
     # Add more test cases as needed
 
 if __name__ == '__main__':
     unittest.main()
+
 
