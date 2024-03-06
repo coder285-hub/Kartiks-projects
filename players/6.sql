@@ -1,2 +1,3 @@
 SELECT first_name, last_name, debut
-WHERE birth_city="Pittsburgh" AND
+WHERE birth_city="Pittsburgh" AND birth_state="PA"
+ORDER BY debut DESC, first_name ASC, last_name ASC;
