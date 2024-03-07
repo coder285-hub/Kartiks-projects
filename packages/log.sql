@@ -12,7 +12,6 @@ WHERE from_address_id = (
     WHERE address LIKE "2 Fin%"
 );
 
-
 -- *** The Devious Delivery ***
 
 -- *** The Forgotten Gift ***
