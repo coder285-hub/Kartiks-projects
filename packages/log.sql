@@ -13,7 +13,7 @@ WHERE from_address_id = (
 );
 
 -- *** The Devious Delivery ***
-
+SELECT 
 
 
 -- *** The Forgotten Gift ***
