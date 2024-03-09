@@ -1,2 +1,2 @@
 SELECT name, city FROM schools
-WHERE 
+WHERE state = "MA" AND type = "Public School" ;
