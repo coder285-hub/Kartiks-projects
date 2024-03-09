@@ -3,7 +3,7 @@ At what type of address did the Lost Letter end up?:
 At what address did the Lost Letter end up?:
 
 At what type of address did the Devious Delivery end up?:Duck debugger
-What were the contents of the Devious Delivery?:Police Station 
+What were the contents of the Devious Delivery?:Police Station
 
-What are the contents of the Forgotten Gift?:
+What are the contents of the Forgotten Gift?:Flowers
 Who has the Forgotten Gift?:
