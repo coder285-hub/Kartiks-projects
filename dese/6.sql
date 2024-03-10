@@ -1,1 +1,2 @@
-SELECT name FROM schools 
+SELECT name FROM schools
+WHERE i
