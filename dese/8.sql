@@ -1,2 +1,2 @@
 SELECT name FROM districts
-JOIN expenditures ON district.id= expenditures.district_id;
+JOIN expenditures ON districts.id= expenditures.district_id;
