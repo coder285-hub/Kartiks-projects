@@ -1,7 +1,7 @@
-SELECT * FROM districts
-WHERE name = "Cambridge";
+
 
 SELECT name FROM schools
-WHERE id=(
-  SELECT 
-)
+WHERE district_id IN(
+  SELECT id FROM districts
+  WHERE name ="Cambridge"
+);
