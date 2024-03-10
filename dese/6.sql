@@ -1,2 +1,5 @@
 SELECT name FROM schools
-WHERE i
+WHERE id=(
+    SELECT school_id FROM graduation_rates
+    WHERE graduated = 100
+);
