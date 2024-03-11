@@ -1,4 +1,4 @@
-SELECT name, per_pupil_expenditure, graduated
+SELECT schools.name, per_pupil_expenditure, graduated
 FROM districts
 JOIN expenditures ON districts.id=expenditures.district_id
 JOIN schools ON districts.id=schools.district_id
