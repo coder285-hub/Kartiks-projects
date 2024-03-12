@@ -22,6 +22,15 @@ CREATE TABLE Companies (
     "Location" TEXT NOT NULL,
 );
 
+CREATE TABLE "people_connections" (
+    "id" INTEGER,
+    "user_id" INTEGER,
+    "following_id" INTEGER,
+    PRIMARY KEY("id"),
+    FOREIGN KEY("user_id") REFERENCES "users"("id"),
+    FOREIGN KEY("following_id") REFERENCES "users"("id"),
+    CONSTRAINT unique_connection UNIQUE (user_id, following_id)
+);
 
 CREATE TABLE "school_connections" (
     "id" INTEGER,
@@ -35,6 +44,8 @@ CREATE TABLE "school_connections" (
     FOREIGN KEY("school_id") REFERENCES "schools"("id"),
     CONSTRAINT unique_school_connection UNIQUE (user_id, school_id)
 );
+
+
 
 
 
