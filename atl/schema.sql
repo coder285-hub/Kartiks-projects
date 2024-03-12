@@ -12,7 +12,12 @@ CREATE TABLE Passengers (
 );
 
 CREATE TABLE Airlines(
-    
+    "id" INTEGER
+    "first_name" TEXT
+    "last_name" TEXT
+    "age" INTEGER
+    PRIMARY KEY("id")
+
 
 )
 
