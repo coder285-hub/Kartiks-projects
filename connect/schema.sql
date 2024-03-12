@@ -22,17 +22,17 @@ CREATE TABLE Companies (
     "Location" TEXT NOT NULL,
 );
 
-CREATE TABLE "people_connections" (
+CREATE TABLE people_connections (
     "id" INTEGER,
     "user_id" INTEGER,
     "following_id" INTEGER,
     PRIMARY KEY("id"),
-    FOREIGN KEY("user_id") REFERENCES "users"("id"),
-    FOREIGN KEY("following_id") REFERENCES "users"("id"),
+    FOREIGN KEY("user_id") REFERENCES users("id"),
+    FOREIGN KEY("following_id") REFERENCES users("id"),
     CONSTRAINT unique_connection UNIQUE (user_id, following_id)
 );
 
-CREATE TABLE "school_connections" (
+CREATE TABLE school_connections (
     "id" INTEGER,
     "user_id" INTEGER,
     "school_id" INTEGER,
@@ -40,11 +40,11 @@ CREATE TABLE "school_connections" (
     "end_date" DATE,
     "degree_type" TEXT,
     PRIMARY KEY("id"),
-    FOREIGN KEY("user_id") REFERENCES "users"("id"),
-    FOREIGN KEY("school_id") REFERENCES "Schools"("id"),
+    FOREIGN KEY("user_id") REFERENCES users("id"),
+    FOREIGN KEY("school_id") REFERENCES Schools("id"),
     CONSTRAINT unique_school_connection UNIQUE (user_id, school_id)
 );
-CREATE TABLE "company_connections" (
+CREATE TABLE company_connections (
     "id" INTEGER,
     "user_id" INTEGER,
     "company_id" INTEGER,
@@ -52,8 +52,8 @@ CREATE TABLE "company_connections" (
     "end_date" DATE,
     "company_type" TEXT,
     PRIMARY KEY("id"),
-    FOREIGN KEY("user_id") REFERENCES "users"("id"),
-    FOREIGN KEY("company_id") REFERENCES "Companies"("id"),
+    FOREIGN KEY("user_id") REFERENCES users ("id"),
+    FOREIGN KEY("company_id") REFERENCES Companies ("id"),
     CONSTRAINT unique_comapny_connection UNIQUE (user_id, company_id)
 );
 
