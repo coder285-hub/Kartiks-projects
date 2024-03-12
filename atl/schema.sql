@@ -30,4 +30,9 @@ CREATE TABLE Flights(
     FOREIGN KEY ("airline_id") -REFERENCES Airlines("id")
 );
 
+CREATE TABLE Check-Ins (
+    "id" INTEGER
+    "datetime" 
+)
+
 
