@@ -21,6 +21,8 @@ CREATE TABLE Companies (
     "Industry" TEXT NOT NULL,
     "Location" TEXT NOT NULL,
 );
+
+
 CREATE TABLE "school_connections" (
     "id" INTEGER,
     "user_id" INTEGER,
