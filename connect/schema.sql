@@ -41,10 +41,20 @@ CREATE TABLE "school_connections" (
     "degree_type" TEXT,
     PRIMARY KEY("id"),
     FOREIGN KEY("user_id") REFERENCES "users"("id"),
-    FOREIGN KEY("school_id") REFERENCES "schools"("id"),
+    FOREIGN KEY("school_id") REFERENCES "Schools"("id"),
     CONSTRAINT unique_school_connection UNIQUE (user_id, school_id)
 );
-
+CREATE TABLE "company_connections" (
+    "id" INTEGER,
+    "user_id" INTEGER,
+    "comapny_id" INTEGER,
+    "start_date" DATE,
+    "end_date" DATE,
+    "company_type" TEXT,
+    PRIMARY KEY("id"),
+    FOREIGN KEY("user_id") REFERENCES "users"("id"),
+    FOREIGN KEY("company_id") REFERENCES "Companies"("id"),
+    CONSTRAINT unique_school_connection UNIQUE (user_id, company_id)
 
 
 
