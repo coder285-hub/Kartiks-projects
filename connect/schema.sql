@@ -5,3 +5,5 @@ CREATE TABLE users (
     "password" TEXT NOT NULL
     Primary Key ("id")
 );
+
+
