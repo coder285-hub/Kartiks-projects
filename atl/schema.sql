@@ -34,8 +34,6 @@ CREATE TABLE Check-Ins (
     PRIMARY KEY("id"),
     FOREIGN KEY ("flight_id") REFERENCES Airlines("id"),
     FOREIGN KEY ("passenger_id") REFERENCES Passengers("id")
-
-
-);
+    );
 
 
