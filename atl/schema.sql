@@ -19,3 +19,15 @@ CREATE TABLE Airlines(
 );
 
 
+CREATE TABLE Flights(
+    "id" INTEGER,
+    "flight_number" INTEGER,
+    "airline_id"-INTEGER,
+    "departing_airport_code" TEXT, -"arrival_airport_code" TEXT,
+    "departing_datetime" DATETIME,
+    "arrival_datetime", DATETIME,
+    PRIMARY KEY("id")
+    FOREIGN KEY ("airline_id") -REFERENCES Airlines("id")
+);
+
+
