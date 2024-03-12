@@ -11,4 +11,8 @@ CREATE TABLE Passengers (
 
 );
 
+CREATE TABLE Airlines(
+    
+)
+
 
