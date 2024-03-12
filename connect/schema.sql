@@ -3,7 +3,7 @@ CREATE TABLE users (
     "last_name" TEXT NOT NULL,
     "username" TEXT NOT NULL UNIQUE,
     "password" TEXT NOT NULL,
-    Primary Key ("id")
+    Primary Key("id")
 );
 
 CREATE TABLE Schools (
@@ -12,7 +12,7 @@ CREATE TABLE Schools (
     "type" TEXT,
     "location" TEXT,
     "year_founded" NUMERIC,
-    Primary Key ("id")
+    Primary Key("id")
 );
 
 CREATE TABLE Companies (
