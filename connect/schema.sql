@@ -6,9 +6,18 @@ CREATE TABLE users (
     Primary Key ("id")
 );
 
-CREATE TABLE schools (
+CREATE TABLE Schools (
     "id" INTEGER NOT NULL,
     "name" TEXT NOT NULL,
     "type" TEXT,
+    "location" TEXT,
+    "year_founded" NUMERIC,
+    Primary Key ("id")
+);
+
+CREATE TABLE Companies (
+    "id" INTEGER NOT NULL,
+    "name" TEXT NOT NULL UNIQUE,
     "
-)
+
+
