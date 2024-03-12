@@ -6,4 +6,6 @@ CREATE TABLE users (
     Primary Key ("id")
 );
 
-
+CREATE TABLE schools (
+    
+)
