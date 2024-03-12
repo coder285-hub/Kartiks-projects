@@ -55,6 +55,7 @@ CREATE TABLE "company_connections" (
     FOREIGN KEY("user_id") REFERENCES "users"("id"),
     FOREIGN KEY("company_id") REFERENCES "Companies"("id"),
     CONSTRAINT unique_comapny_connection UNIQUE (user_id, company_id)
+);
 
 
 
