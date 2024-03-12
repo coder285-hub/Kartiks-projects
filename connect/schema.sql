@@ -21,5 +21,18 @@ CREATE TABLE Companies (
     "Industry" TEXT NOT NULL,
     "Location" TEXT NOT NULL,
 );
+CREATE TABLE "school_connections" (
+    "id" INTEGER,
+    "user_id" INTEGER,
+    "school_id" INTEGER,
+    "start_date" DATE,
+    "end_date" DATE,
+    "degree_type" TEXT,
+    PRIMARY KEY("id"),
+    FOREIGN KEY("user_id") REFERENCES "users"("id"),
+    FOREIGN KEY("school_id") REFERENCES "schools"("id"),
+    CONSTRAINT unique_school_connection UNIQUE (user_id, school_id)
+);
+
 
 
