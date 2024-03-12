@@ -7,5 +7,8 @@ CREATE TABLE users (
 );
 
 CREATE TABLE schools (
-    
+    "id" INTEGER NOT NULL,
+    "name" TEXT NOT NULL,
+    "type" TEXT,
+    "
 )
