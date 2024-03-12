@@ -1,7 +1,3 @@
-DROP TABLE "Passengers"
-DROP TABLE "Check-Ins"
-DROP TABLE "Airlines"
-
 CREATE TABLE Passengers (
     "id" INTEGER
     "first_name" TEXT
@@ -12,9 +8,9 @@ CREATE TABLE Passengers (
 );
 
 CREATE TABLE Airlines(
-    "id" INTEGER
-    "name" TEXT
-    "concourse" TEXT
+    "id" INTEGER,
+    "name" TEXT,
+    "concourse" TEXT,
     PRIMARY KEY("id")
 );
 
@@ -23,16 +19,23 @@ CREATE TABLE Flights(
     "id" INTEGER,
     "flight_number" INTEGER,
     "airline_id"-INTEGER,
-    "departing_airport_code" TEXT, -"arrival_airport_code" TEXT,
+    "departing_airport_code" TEXT, "arrival_airport_code" TEXT,
     "departing_datetime" DATETIME,
     "arrival_datetime", DATETIME,
-    PRIMARY KEY("id")
-    FOREIGN KEY ("airline_id") -REFERENCES Airlines("id")
+    PRIMARY KEY("id"),
+    FOREIGN KEY ("airline_id") REFERENCES Airlines("id")
 );
 
 CREATE TABLE Check-Ins (
-    "id" INTEGER
-    "datetime" 
-)
+    "id" INTEGER,
+    "datetime" DATETIME,
+    "flight_id" INTEGER,
+    "passenger_id" INTEGER,
+    PRIMARY KEY("id"),
+    FOREIGN KEY ("flight_id") REFERENCES Airlines("id"),
+    FOREIGN KEY ("passenger_id") REFERENCES Passengers("id")
+
+
+);
 
 
