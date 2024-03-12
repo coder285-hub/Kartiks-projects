@@ -18,6 +18,8 @@ CREATE TABLE Schools (
 CREATE TABLE Companies (
     "id" INTEGER NOT NULL,
     "name" TEXT NOT NULL UNIQUE,
-    "
+    "Industry" TEXT NOT NULL,
+    "Location" TEXT NOT NULL,
+);
 
 
