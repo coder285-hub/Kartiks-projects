@@ -43,9 +43,14 @@ CREATE TABLE meteorites(
     year INTEGER,
     lat REAL,
     long REAL
-    Primary Key ('id')
+    Primary Key('id')
 );
 
+INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
+SELECT "name", "class", "mass", "discovery", "year", "lat", "long"
+FROM "meteorites_temp"
+WHERE "nametype" != 'Relict'
+ORDER BY "year", "name";
 
 
 
