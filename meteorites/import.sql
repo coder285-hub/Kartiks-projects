@@ -19,7 +19,7 @@ where mass =0;
 
 UPDATE meteorites_temp
 SET year ="NULL"
-where year =0;
+where year LIKE '';
 
 UPDATE meteorites_temp
 SET lat ="NULL"
