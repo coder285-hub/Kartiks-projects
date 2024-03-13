@@ -1,5 +1,8 @@
 CREATE TABLE "meteorites_temp" (
-    
+    id INTEGER
+    name TEXT
+
+
 );
 .import --csv meteorites.csv meteorites_temp
 
