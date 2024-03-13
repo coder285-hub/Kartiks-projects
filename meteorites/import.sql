@@ -34,5 +34,18 @@ SET mass = ROUND (mass,2),
     lat = ROUND (lat,2),
     long = ROUND (long,2);
 
+CREATE TABLE meteorites(
+    id INTEGER,
+    name TEXT,
+    class TEXT,
+    mass REAL,
+    discovery TEXT,
+    year INTEGER,
+    lat REAL,
+    long REAL
+    Primary Key ('id')
+);
+
+
 
 
