@@ -1,9 +1,16 @@
 CREATE TABLE "meteorites_temp" (
-    id INTEGER
-    name TEXT
-
-
+    id INTEGER,
+    name TEXT,
+    nametype TEXT,
+    class TEXT,
+    mass REAL,
+    discovery TEXT,
+    year INTEGER,
+    lat REAL,
+    long REAL
+    Primary Key ('id')
 );
+
 .import --csv meteorites.csv meteorites_temp
 
 UPDATE meteorites_temp
