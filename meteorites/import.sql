@@ -1,4 +1,4 @@
-CREATE TABLE "meteorites_temp" (
+CREATE TABLE meteorites_temp (
     id INTEGER,
     name TEXT,
     nametype TEXT,
@@ -28,6 +28,11 @@ where lat =0;
 UPDATE meteorites_temp
 SET long ="NULL"
 where long =0;
+
+UPDATE meteorites_temp
+SET mass = ROUND (mass,2),
+    lat = ROUND (lat,2),
+    long = ROUND (long,2);
 
 
 
