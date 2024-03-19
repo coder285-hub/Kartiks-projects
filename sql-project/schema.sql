@@ -40,8 +40,15 @@ CREATE TABLE Order_Details(
 
 CREATE TABLE Inventory(
     inventory_id SERIAL PRIMARY KEY,
-    book
+    book_id INT NOT NULL,
+    quantity INT NOT NULL,
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
 
+);
+
+CREATE TABLE Reviews(
+    review_id SERIAL PRIMARY KEY,
+    book_id INT NOT NULL,
 )
 
 
