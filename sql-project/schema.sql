@@ -49,6 +49,56 @@ CREATE TABLE Inventory(
 CREATE TABLE Reviews(
     review_id SERIAL PRIMARY KEY,
     book_id INT NOT NULL,
-)
+    customer_id INT NOT NULL,
+    rating INT NOT NULL,
+    review_text TEXT,
+    review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (book_id) REFERENCES Books(book_id),
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+CREATE TABLE Recommendations(
+    recommendation_id SERIAL PRIMARY KEY,
+    customer_id INT NOT NULL,
+    recommended_book_id INT NOT NULL,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
+    FOREIGN KEY(recommended_book_id) REFERENCES Books(book_id)
+
+);
+
+CREATE TABLE Genres(
+    genre_id SERIAL PRIMARY KEY,
+    genre_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Book_Genres(
+    book_genre_id SERIAL PRIMARY KEY,
+    book_id INT NOT NULL,
+    genre_id INT NOT NULL,
+    FOREIGN KEY (book_id) REEFERENCES Books(book_id),
+    FOREIGN KEY (genre_id) REFERENCES Genres(genre_id)
+);
+
+CREATE TABLE Discussions(
+    discussion_id SERIAL PRIMARY KEY,
+    book_id INT NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    discussion_text TEXT,
+    discussion_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
+);
+
+CREATE TABLE Comments(
+    comment_id SERIAL PRIMARY KEY,
+    discussion_id INT,
+    review_id INT,
+    customer_id INT NOT NULL,
+    comment_text TEXT,
+    comment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (discussion_id) REFERENCES Discussions(discussion_id),
+    FOREIGN KEY (review_id) REFERENCES Reviews(review_id),
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+
+);
 
 
