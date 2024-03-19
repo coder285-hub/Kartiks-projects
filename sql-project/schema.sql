@@ -19,3 +19,13 @@ CREATE TABLE Customers(
     phone VARCHAR(15),
     address TEXT
 );
+
+CREATE TABLE Orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_id INT NOT NULL,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGEN KEY (customer_id) REFERENCES Customers(customers_id)
+
+);
+
+
