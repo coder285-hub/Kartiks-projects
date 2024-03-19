@@ -28,4 +28,20 @@ CREATE TABLE Orders (
 
 );
 
+CREATE TABLE Order_Details(
+    order_detail_id SERIAL PRIMARY KEY,
+    order_id INT NOT NULL,
+    book_id INT NOT NULL,
+    quantity INT NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
+);
+
+CREATE TABLE Inventory(
+    inventory_id SERIAL PRIMARY KEY,
+    book
+
+)
+
 
