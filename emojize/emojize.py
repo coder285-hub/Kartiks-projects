@@ -1,14 +1,10 @@
 import emoji
 
+# // Get the user input
+inp: str = input("Input: ")
 
-def main():
-    emojize()
+# // Convert the input to an emojized string
+emojized: str = emoji.emojize(inp, language='alias')
 
-
-def emojize():
-    user_input = input("Input: ")
-    print(emoji.emojize(user_input))
-
-
-if __name__ == "__main__":
-    main()
+# // Print the emojized result
+print(emojized)
