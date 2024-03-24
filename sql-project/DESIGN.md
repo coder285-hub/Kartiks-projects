@@ -29,4 +29,15 @@ In addition to the functionality of an online shop, this database will include u
 
 ## RELATIONSHIPS
 
+* Books - writers: Many-to-Many connection as a book may have several writers and one author can create multiple books.
+
+* Books and Inventory: A one-to-one link exists since each book is associated with specific inventory information.
+
+* Customers - Orders: A one-to-many connection exists because a customer can place several orders, but each order belongs to a single customer.
+
+* Orders - Inventory: A many-to-many connection exists because each order can contain several books, and a book can be included in numerous orders.
+
+* Books - Reviews: One-to-Many connection, as a book can have several reviews, but each review is exclusive to one book.
+
+* Customers - Reviews: One-to-Many connection in which a customer can post several reviews, yet each review is authored by a single customer.
 
