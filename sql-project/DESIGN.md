@@ -23,6 +23,6 @@ In addition to the functionality of an online shop, this database will include u
 
 * Categories: Groups books into categories for better browsing.
 
-Conversations: Hosts community conversations about different book-related subjects.
+* Conversations: Hosts community conversations about different book-related subjects.
 
-Comments: Allows users to leave feedback on conversations and reviews.
+* Comments: Allows users to leave feedback on conversations and reviews.
