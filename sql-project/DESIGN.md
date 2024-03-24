@@ -7,9 +7,9 @@ The goal of this comprehensive database is to establish a large online platform 
 In addition to the functionality of an online shop, this database will include user reviews, suggestions, author interactions, and community forums. It seeks to meet the different demands of book lovers, from casual readers to devoted bibliophiles.
 
 ## ENTITTIES
-* Books, which represent specific items offered in the shop.
+* Books: which represent specific items offered in the shop.
 
-* Writers: Contains information on book writers.
+* Authors: Contains information on book writers.
 
 * Customers: Stores information on customers who engage with the site.
 
@@ -19,19 +19,19 @@ In addition to the functionality of an online shop, this database will include u
 
 * Reviews: A collection of user-generated book reviews.
 
-* Suggestions: Keeps individualized book suggestions for users.
+* Recommendations: Keeps individualized book suggestions for users.
 
-* Categories: Groups books into categories for better browsing.
+* Genres: Groups books into categories for better browsing.
 
-* Conversations: Hosts community conversations about different book-related subjects.
+* Discussions: Hosts community conversations about different book-related subjects.
 
 * Comments: Allows users to leave feedback on conversations and reviews.
 
 ## RELATIONSHIPS
 
-* Books - writers: Many-to-Many connection as a book may have several writers and one author can create multiple books.
+* Books - Authors : Many-to-Many connection as a book may have several writers and one author can create multiple books.
 
-* Books and Inventory: A one-to-one link exists since each book is associated with specific inventory information.
+* Books - Inventory: A one-to-one link exists since each book is associated with specific inventory information.
 
 * Customers - Orders: A one-to-many connection exists because a customer can place several orders, but each order belongs to a single customer.
 
@@ -41,3 +41,8 @@ In addition to the functionality of an online shop, this database will include u
 
 * Customers - Reviews: One-to-Many connection in which a customer can post several reviews, yet each review is authored by a single customer.
 
+Customers - suggestions: A one-to-many connection in which a consumer may get several suggestions, but each recommendation is specific to one customer.
+Genres - Books: A many-to-many link exists because a book can belong to numerous genres, and a genre can contain multiple books.
+Books - Discussion: A one-to-many relationship occurs when a book is discussed in several venues, but each conversation is limited to one book.
+
+Discussions - Comments: A one-to-many relationship exists because a discussion might contain several comments, but each remark is specific to one discussion or review.
