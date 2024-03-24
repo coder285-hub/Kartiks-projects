@@ -48,6 +48,6 @@ In addition to the functionality of an online shop, this database will include u
 * Books - Discussion: A one-to-many relationship occurs when a book is discussed in several venues, but each conversation is limited to one book.
 
 * Discussions - Comments: A one-to-many relationship exists because a discussion might contain several comments, but each remark is specific to one discussion or review.
-d
+
 
 
