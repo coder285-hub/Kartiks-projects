@@ -57,6 +57,14 @@ In addition to the functionality of an online shop, this database will include u
 
 * Book_ Genres - Genres : A one- to- many relationship since each entry in the Book_Genres database relates to a certain genre in the Genres table, showing which genre is linked with the book.Each genre in the Genres table can be referred by several entries in the Book_Genres table since multiple novels might fall into the same genre.
 
+## OPTIMIZATIONS
+* Indexing: Implement indexing on commonly searched columns such as book titles, author names, and customer information to dramatically improve query speed. To improve efficiency even further, consider utilizing composite indexes for queries with several columns.
+* Caching: Create caching systems to cache frequently requested data, reducing database load and increasing system responsiveness. Use tactics like time-based expiry and cache invalidation to maintain data consistency.
+
+* Full-text Search: Use full-text search to efficiently search inside book titles, author names, reviews, and conversations, resulting in quick and accurate retrieval of relevant information. Consider stemming, synonym identification, and language-specific analyzers to boost search accuracy.
+
+
+
 
 
 
