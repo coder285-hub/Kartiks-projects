@@ -51,7 +51,8 @@ In addition to the functionality of an online shop, this database will include u
 
 * Orders - Order Detial: A one-to-many relationship exists since each order information in the Order_Details table corresponds to a single order in the Orders table. This is because each entry in Order_Details corresponds to a single item ordered within an order. Each order in the Orders database can include several order details, which indicate that various products are included in the same order.
 
-* Orders - Books : A one-to-many relationships 
+* Orders - Books : A one-to-many relationships since each order information in the Order_Details table corresponds to exactly one book in the Books table. This represents the precise book that was ordered as part of the order details.If a book has been ordered more than once, numerous order details can be used to refer to it.
+
 
 
 
