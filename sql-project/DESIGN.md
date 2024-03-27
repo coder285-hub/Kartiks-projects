@@ -49,8 +49,9 @@ In addition to the functionality of an online shop, this database will include u
 
 * Discussions - Comments: A one-to-many relationship exists because a discussion might contain several comments, but each remark is specific to one discussion or review.
 
-* Orders - Order Detial: Each order information in the Order_Details table corresponds to a single order in the Orders table. This is because each entry in Order_Details corresponds to a single item ordered within an order.
-Each order in the Orders database can include several order details, which indicate that various products are included in the same order.
+* Orders - Order Detial: A one-to-many relationship exists since each order information in the Order_Details table corresponds to a single order in the Orders table. This is because each entry in Order_Details corresponds to a single item ordered within an order. Each order in the Orders database can include several order details, which indicate that various products are included in the same order.
+
+* Orders - Books : A one-to-many relationships 
 
 
 
