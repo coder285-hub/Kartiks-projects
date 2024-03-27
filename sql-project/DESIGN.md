@@ -69,6 +69,16 @@ In addition to the functionality of an online shop, this database will include u
 * Query Rewriting: Examine often used queries to find areas that could be optimized. To cut down on execution time, think about simplifying complex queries using simpler constructs or streamlining join processes.
 Query Caching: To prevent repetitive processing and lessen database load, cache the results of frequently run queries. To ensure data consistency, put procedures in place to invalidate cached query results when the underlying data changes.
 
+## LIMITATIONS
+
+* Challenges with Scalability: Performance can be enhanced by improvements, however scaling the database to handle rapid expansion may provide difficulties. Ensuring scalability may necessitate large infrastructure investments and meticulous architectural planning.
+
+* Data Consistency: Adding partitioning and caching techniques could make it more difficult to keep data consistent across distributed systems. Effective synchronization mechanism implementation is essential, yet it can increase system complexity and overhead.
+
+* Security Concerns: Ensuring strong security measures is crucial because the database interacts with several components and external integrations. There are serious dangers associated with poor access control, vulnerabilities in external APIs, and data breaches. These issues call for ongoing monitoring and fixes.
+
+* Regarding Costs: There may be extra expenses associated with implementing advanced optimizations and integrations, such as those related to development, software licensing, and hardware. It is crucial to strike a balance between cost-effectiveness and performance gains, particularly
+
 
 
 
