@@ -6,6 +6,9 @@ The goal of this comprehensive database is to establish a large online platform 
 ## SCOPE
 In addition to the functionality of an online shop, this database will include user reviews, suggestions, author interactions, and community forums. It seeks to meet the different demands of book lovers, from casual readers to devoted bibliophiles.
 
+## VIDEO URL
+https://youtu.be/LZoE2XJVglM
+
 ## ENTITTIES
 * Books: which represent specific items offered in the shop.
 
