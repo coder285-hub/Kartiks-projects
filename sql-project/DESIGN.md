@@ -55,7 +55,10 @@ In addition to the functionality of an online shop, this database will include u
 
 * Book_Genres - Books : A one-to-many relationships since each row in the Book_Genres database corresponds to a single genre connected with a given book. Each book in the Books table can have several genres, and each genre can be linked to many books.
 
-* Book_ Genres - Genres : 
+* Book_ Genres - Genres : A one- to- many relationship since each entry in the Book_Genres database relates to a certain genre in the Genres table, showing which genre is linked with the book.Each genre in the Genres table can be referred by several entries in the Book_Genres table since multiple novels might fall into the same genre.
+
+
+
 
 
 
