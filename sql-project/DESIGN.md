@@ -53,7 +53,7 @@ In addition to the functionality of an online shop, this database will include u
 
 * Orders - Books : A one-to-many relationships since each order information in the Order_Details table corresponds to exactly one book in the Books table. This represents the precise book that was ordered as part of the order details.If a book has been ordered more than once, numerous order details can be used to refer to it.
 
-
+* Book_Genres - Books : 
 
 
 
