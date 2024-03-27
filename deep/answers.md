@@ -13,4 +13,5 @@ Each database doesn't need to require more space if the data is split up into th
 
 ## Partitioning by Hash Value
 
-TODO
+By searching for small hash values rather than the whole date in possible date searches, entering the hash value reduces the amount of time the database takes to operate. Indexing can also help to speed up the search process. Giving the same hash value to the same date can occasionally be challenging, even if all hash values are provided.
+
