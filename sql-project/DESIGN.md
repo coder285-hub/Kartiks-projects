@@ -63,7 +63,11 @@ In addition to the functionality of an online shop, this database will include u
 
 * Full-text Search: Use full-text search to efficiently search inside book titles, author names, reviews, and conversations, resulting in quick and accurate retrieval of relevant information. Consider stemming, synonym identification, and language-specific analyzers to boost search accuracy.
 
+* Horizontal Partitioning: Using parameters like publication year, genre, or geographic location, divide the database into smaller, easier-to-manage segments. The utilization of this strategy can enhance query performance by dividing data among several physical storage sites.Divide commonly accessible columns from less frequently accessed ones into distinct tables or storage systems using vertical partitioning. This enhancement can enhance query performance overall and lower I/O overhead.
 
+
+* Query Rewriting: Examine often used queries to find areas that could be optimized. To cut down on execution time, think about simplifying complex queries using simpler constructs or streamlining join processes.
+Query Caching: To prevent repetitive processing and lessen database load, cache the results of frequently run queries. To ensure data consistency, put procedures in place to invalidate cached query results when the underlying data changes.
 
 
 
