@@ -31,7 +31,6 @@ def load_data(directory):
             else:
                 names[row["name"].lower()].add(row["id"])
 
-
     # Load movies
     with open(f"{directory}/movies.csv", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -93,48 +92,8 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    start = Node(state=source, parent=None, action=None)
-    frontier = QueueFrontier()
-    frontier.add(start)
-
-    explored = set()
-
-    while True:
-        if frontier.empty():
-            return None
-
-        node = frontier.remove()
-
-        if node.state == target:
-            rt = []
-
-            while node.parent is not None:
-                rt.append((node.action, node.state))
-                node = node.parent
-
-            rt.reverse()
-            return rt
-
-        explored.add(node.state)
-
-
-        # find neighbours
-        neighbours = neighbors_for_person(node.state)
-
-        # add neighbours to frontier
-        for action, state in neighbours:
-            if not frontier.contains_state(state) and state not in explored:
-                child = Node(state=state, parent=node, action=action)
-                if child.state == target:
-                    rt = []
-
-                    while child.parent is not None:
-                        rt.append((child.action, child.state))
-                        child = child.parent
-
-                    rt.reverse()
-                    return rt
-                frontier.add(child)
+    # TODO
+    raise NotImplementedError
 
 
 def person_id_for_name(name):
